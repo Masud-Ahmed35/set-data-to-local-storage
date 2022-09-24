@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Bike from '../Bike/Bike';
+import './Bikes.css'
 
 const Bikes = () => {
 
@@ -17,12 +18,14 @@ const Bikes = () => {
     return (
         <div>
             <h1>---------Welcome To My Bike Store-------</h1>
-            {
-                bikes.map(bike => <Bike
-                    key={bike.id}
-                    data={bike}
-                ></Bike>)
-            }
+            <div className='bikes'>
+                {
+                    bikes.map(bike => <Bike
+                        key={bike.id}
+                        data={bike}
+                    ></Bike>)
+                }
+            </div>
         </div>
     );
 };
